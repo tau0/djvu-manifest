@@ -173,12 +173,13 @@ display_djvm_dirm(ByteStream & out_str, IFFByteStream & iff,
   GPList<DjVmDir::File> list = dir->get_files_list();
   if (!dir->is_indirect())
   {
-    out_str.format( "Document directory (indirect, %d files %d pages)", 
+    out_str.format( "\n\t'filesNumber': %d,\n\t'pagesNumber': %d,",
 	                  dir->get_files_num(), dir->get_pages_num());
+    out_str.format( "\n\t'files': [");
     for (GPosition p=list; p; ++p)
-//      out_str.format( "\n%s%s -> %s (%d) %d %d", (const char*)head, 
-//                      (const char*)list[p]->get_load_name(), (const char*)list[p]->get_save_name(), list[p]->offset, list[p]->size, list[p]->get_page_num() );
-      out_str.format( "\n%d %d %d", list[p]->offset, list[p]->size, list[p]->get_page_num() );
+      out_str.format( "\n\t\t{ 'offset': %d, 'size': %d, 'pageNumber': %d },", list[p]->offset, list[p]->size, list[p]->get_page_num() );
+    out_str.format( "\n\t]");
+    
   }
   else
   {
@@ -303,29 +304,10 @@ display_chunks(ByteStream & out_str, IFFByteStream &iff,
     
     GUTF8String msg;
     msg.format("%s-%s- [%d] ", (const char *)head, (const char *)id, size);
-    out_str.format( "%s", (const char *)msg);
+    // out_str.format( "%s", (const char *)msg);
     // Display DJVM is when adequate
-    if (djvminfo.dir)
-    {
-      GP<DjVmDir::File> rec = djvminfo.map[rawoffset];
-      if (rec)
-        {
-          GUTF8String id = rec->get_load_name();
-          GUTF8String title = rec->get_title();
-          out_str.format( "{%s}", (const char*) id);
-          if (rec->is_include())
-            out_str.format(" [I]");
-          if (rec->is_thumbnails())
-            out_str.format(" [T]");
-          if (rec->is_shared_anno())
-            out_str.format(" [S]");
-          if (rec->is_page())
-            out_str.format(" [P%d]", rec->get_page_num()+1);
-          if (id != title)
-            out_str.format(" (%s)", (const char*)title);
-        }
-    }
-    // Test chunk type
+    
+            // Test chunk type
     iff.full_id(fullid);
     for (int i=0; disproutines[i].id; i++)
       if (fullid == disproutines[i].id || id == disproutines[i].id)
@@ -338,7 +320,6 @@ display_chunks(ByteStream & out_str, IFFByteStream &iff,
         break;
       }
       // Default display of composite chunk
-      out_str.format( "\n");
       if (iff.composite())
         display_chunks(out_str, iff, head2, djvminfo);
       // Terminate
@@ -361,7 +342,9 @@ DjVuDumpHelper::dump(GP<ByteStream> gstr)
    GUTF8String head="  ";
    GP<IFFByteStream> iff=IFFByteStream::create(gstr);
    DjVmInfo djvminfo;
+   out_str->format("{");
    display_chunks(*out_str, *iff, head, djvminfo);
+   out_str->format("\n}\n");
    return out_str;
 }
 
