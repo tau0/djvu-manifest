@@ -173,11 +173,13 @@ display_djvm_dirm(ByteStream & out_str, IFFByteStream & iff,
   GPList<DjVmDir::File> list = dir->get_files_list();
   if (!dir->is_indirect())
   {
-    out_str.format( "\n\t'filesNumber': %d,\n\t'pagesNumber': %d,",
+    out_str.format( "\n\t\"filesNumber\": %d,\n\t\"pagesNumber\": %d,",
 	                  dir->get_files_num(), dir->get_pages_num());
-    out_str.format( "\n\t'files': [");
-    for (GPosition p=list; p; ++p)
-      out_str.format( "\n\t\t{ 'offset': %d, 'size': %d, 'pageNumber': %d },", list[p]->offset, list[p]->size, list[p]->get_page_num() );
+    out_str.format( "\n\t\"files\": [");
+    GPosition p=list;
+    out_str.format( "\n\t\t{ \"offset\": %d, \"size\": %d, \"pageNumber\": %d }", list[p]->offset, list[p]->size, list[p]->get_page_num() );
+    for (++p; p; ++p)
+      out_str.format( ",\n\t\t{ \"offset\": %d, \"size\": %d, \"pageNumber\": %d }", list[p]->offset, list[p]->size, list[p]->get_page_num() );
     out_str.format( "\n\t]");
     
   }
