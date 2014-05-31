@@ -14,7 +14,7 @@
 //C- but WITHOUT ANY WARRANTY; without even the implied warranty of
 //C- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 //C- GNU General Public License for more details.
-//C- 
+//C-
 //C- DjVuLibre-3.5 is derived from the DjVu(r) Reference Library from
 //C- Lizardtech Software.  Lizardtech Software has authorized us to
 //C- replace the original DjVu(r) Reference Library notice by the following
@@ -35,16 +35,16 @@
 //C- | The computer code originally released by LizardTech under this
 //C- | license and unmodified by other parties is deemed "the LIZARDTECH
 //C- | ORIGINAL CODE."  Subject to any third party intellectual property
-//C- | claims, LizardTech grants recipient a worldwide, royalty-free, 
-//C- | non-exclusive license to make, use, sell, or otherwise dispose of 
-//C- | the LIZARDTECH ORIGINAL CODE or of programs derived from the 
-//C- | LIZARDTECH ORIGINAL CODE in compliance with the terms of the GNU 
-//C- | General Public License.   This grant only confers the right to 
-//C- | infringe patent claims underlying the LIZARDTECH ORIGINAL CODE to 
-//C- | the extent such infringement is reasonably necessary to enable 
-//C- | recipient to make, have made, practice, sell, or otherwise dispose 
-//C- | of the LIZARDTECH ORIGINAL CODE (or portions thereof) and not to 
-//C- | any greater extent that may be necessary to utilize further 
+//C- | claims, LizardTech grants recipient a worldwide, royalty-free,
+//C- | non-exclusive license to make, use, sell, or otherwise dispose of
+//C- | the LIZARDTECH ORIGINAL CODE or of programs derived from the
+//C- | LIZARDTECH ORIGINAL CODE in compliance with the terms of the GNU
+//C- | General Public License.   This grant only confers the right to
+//C- | infringe patent claims underlying the LIZARDTECH ORIGINAL CODE to
+//C- | the extent such infringement is reasonably necessary to enable
+//C- | recipient to make, have made, practice, sell, or otherwise dispose
+//C- | of the LIZARDTECH ORIGINAL CODE (or portions thereof) and not to
+//C- | any greater extent that may be necessary to utilize further
 //C- | modifications or combinations.
 //C- |
 //C- | The LIZARDTECH ORIGINAL CODE is provided "AS IS" WITHOUT WARRANTY
@@ -124,7 +124,7 @@ display_fgbz(ByteStream & out_str, IFFByteStream &iff,
   GP<ByteStream> gbs = iff.get_bytestream();
   int version = gbs->read8();
   int size = gbs->read16();
-  out_str.format( "JB2 colors data, v%d, %d colors", 
+  out_str.format( "JB2 colors data, v%d, %d colors",
                   version & 0x7f, size);
 }
 
@@ -159,7 +159,7 @@ display_iw4(ByteStream & out_str, IFFByteStream &iff,
       unsigned char yhi = gbs->read8();
       unsigned char ylo = gbs->read8();
       out_str.format( ", v%d.%d (%s), %dx%d", major & 0x7f, minor,
-                      (major & 0x80 ? "b&w" : "color"), 
+                      (major & 0x80 ? "b&w" : "color"),
                       (xhi<<8)+xlo, (yhi<<8)+ylo );
     }
 }
@@ -171,21 +171,17 @@ display_djvm_dirm(ByteStream & out_str, IFFByteStream & iff,
   GP<DjVmDir> dir = DjVmDir::create();
   dir->decode(iff.get_bytestream());
   GPList<DjVmDir::File> list = dir->get_files_list();
-  if (!dir->is_indirect())
+  if (dir->is_indirect())
   {
-    out_str.format( "\n\t\"filesNumber\": %d,\n\t\"pagesNumber\": %d,",
+    out_str.format( "Document directory (indirect, %d files %d pages)",
 	                  dir->get_files_num(), dir->get_pages_num());
-    out_str.format( "\n\t\"files\": [");
-    GPosition p=list;
-    out_str.format( "\n\t\t{ \"offset\": %d, \"size\": %d, \"pageNumber\": %d }", list[p]->offset, list[p]->size, list[p]->get_page_num() );
-    for (++p; p; ++p)
-      out_str.format( ",\n\t\t{ \"offset\": %d, \"size\": %d, \"pageNumber\": %d }", list[p]->offset, list[p]->size, list[p]->get_page_num() );
-    out_str.format( "\n\t]");
-    
+    for (GPosition p=list; p; ++p)
+      out_str.format( "\n%s%s -> %s", (const char*)head,
+                      (const char*)list[p]->get_load_name(), (const char*)list[p]->get_save_name() );
   }
   else
   {
-    out_str.format( "Document directory (bundled, %d files %d pages)", 
+    out_str.format( "Document directory (bundled, %d files %d pages)",
 	                  dir->get_files_num(), dir->get_pages_num());
     djvminfo.dir = dir;
     djvminfo.map.empty();
@@ -230,7 +226,7 @@ display_incl(ByteStream & out_str, IFFByteStream & iff,
    char ch;
    while(iff.read(&ch, 1) && ch!='\n')
      name += ch;
-   out_str.format( "Indirection chunk --> {%s}", (const char *) name);
+   out_str.format( "%s", (const char *) name);
 }
 
 static void
@@ -259,8 +255,8 @@ struct displaysubr
   void (*subr)(ByteStream &, IFFByteStream &, GUTF8String,
 	       size_t, DjVmInfo&, int counter);
 };
- 
-static displaysubr disproutines[] = 
+
+static displaysubr disproutines[] =
 {
   { "DJVU.INFO", display_djvu_info },
   { "DJVU.Smmr", display_smmr },
@@ -292,42 +288,68 @@ static void
 display_chunks(ByteStream & out_str, IFFByteStream &iff,
 	       const GUTF8String &head, DjVmInfo djvminfo)
 {
+  int time = 0;
   size_t size;
   GUTF8String id, fullid;
   GUTF8String head2 = head + "  ";
   GPMap<int,DjVmDir::File> djvmmap;
   int rawoffset;
   GMap<GUTF8String, int> counters;
-  
+
+
   while ((size = iff.get_chunk(id, &rawoffset)))
   {
     if (!counters.contains(id)) counters[id]=0;
     else counters[id]++;
-    
+
     GUTF8String msg;
-    msg.format("%s-%s- [%d] ", (const char *)head, (const char *)id, size);
-    // out_str.format( "%s", (const char *)msg);
+    msg.format("%s%s{ \"id\": \"%s\", \"offset\": %d, \"size\": %d, ", time++ ? ",\n" : "\n", (const char *)head, (const char *)id, rawoffset, size + 8);
+    out_str.format( "%s", (const char *)msg);
     // Display DJVM is when adequate
-    
-            // Test chunk type
+    if (djvminfo.dir)
+    {
+      GP<DjVmDir::File> rec = djvminfo.map[rawoffset];
+      if (rec)
+        {
+          GUTF8String id = rec->get_load_name();
+          GUTF8String title = rec->get_title();
+          out_str.format( "\"name\": \"%s\", ", (const char*) id);
+          if (rec->is_include())
+            out_str.format("\"type\": \"dictionary\"");
+          if (rec->is_thumbnails())
+            out_str.format("\"type\": \"thumb\" ");
+          if (rec->is_shared_anno())
+            out_str.format("\"type\": anno ");
+          if (rec->is_page())
+            out_str.format("\"type\": \"page\", \"pageNumber\": %d", rec->get_page_num()+1);
+          if (id != title)
+            out_str.format("\"title\", \"%s\"", (const char*)title);
+          out_str.format(", \"internalChunks\": [");
+        }
+    } else if (id == "FORM:DJVM") {
+      out_str.format("\"internalChunks\": [");
+    }
+    // Test chunk type
     iff.full_id(fullid);
     for (int i=0; disproutines[i].id; i++)
       if (fullid == disproutines[i].id || id == disproutines[i].id)
       {
         int n = msg.length();
-        while (n++ < 14+(int) head.length()) putchar(out_str, ' ');
-        if (!iff.composite()) out_str.format( "    ");
+        //while (n++ < 14+(int) head.length()) putchar(out_str, ' ');
+        if (!iff.composite()) out_str.format( "\"info\": \"");
         (*disproutines[i].subr)(out_str, iff, head2,
                                 size, djvminfo, counters[id]);
+        out_str.format("\"}");
         break;
       }
       // Default display of composite chunk
-      if (iff.composite())
+      //out_str.format( "\n");
+      if (iff.composite()) {
         display_chunks(out_str, iff, head2, djvminfo);
+        out_str.format("\n%s]}", (const char *)head);
+      }
       // Terminate
       iff.close_chunk();
-      if (id[2]=='R')
-          break;
   }
 }
 
@@ -344,9 +366,7 @@ DjVuDumpHelper::dump(GP<ByteStream> gstr)
    GUTF8String head="  ";
    GP<IFFByteStream> iff=IFFByteStream::create(gstr);
    DjVmInfo djvminfo;
-   out_str->format("{");
    display_chunks(*out_str, *iff, head, djvminfo);
-   out_str->format("\n}\n");
    return out_str;
 }
 

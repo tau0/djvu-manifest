@@ -1,0 +1,401 @@
+{ "id": "FORM:DJVM", "size": 1106764, "internalChunks": [
+  { "id": "DIRM", "size": 680, "info": "Document directory (bundled, 82 files 74 pages)"},
+  { "id": "FORM:DJVU", "size": 6657, "name": "0-003.djvu", "type": "page", "pageNumber": 1, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 1470x2466, v25, 300 dpi, gamma=2.2"},
+    { "id": "Sjbz", "size": 4365, "info": "JB2 bilevel data"},
+    { "id": "FG44", "size": 704, "info": "IW4 data #1, 100 slices, v1.2 (color), 123x206"},
+    { "id": "BG44", "size": 689, "info": "IW4 data #1, 74 slices, v1.2 (color), 490x822"},
+    { "id": "BG44", "size": 266, "info": "IW4 data #2, 10 slices"},
+    { "id": "BG44", "size": 11, "info": "IW4 data #3, 4 slices"},
+    { "id": "BG44", "size": 549, "info": "IW4 data #4, 9 slices"}
+  ]},
+  { "id": "FORM:DJVI", "size": 462, "name": "c-001.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 450, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 4059, "name": "c-000.djvu", "type": "page", "pageNumber": 2, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 72 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-001.djbz"},
+    { "id": "Sjbz", "size": 4011, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14002, "name": "c-001.djvu", "type": "page", "pageNumber": 3, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 72 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-001.djbz"},
+    { "id": "Sjbz", "size": 13954, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16150, "name": "c-002.djvu", "type": "page", "pageNumber": 4, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2934x2395, v25, 300 dpi, gamma=2.2"},
+    { "id": "Sjbz", "size": 16120, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 9953, "name": "c-012.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 9941, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 6823, "name": "c-003.djvu", "type": "page", "pageNumber": 5, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 6775, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 11025, "name": "c-004.djvu", "type": "page", "pageNumber": 6, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 10977, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13631, "name": "c-005.djvu", "type": "page", "pageNumber": 7, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 13583, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13065, "name": "c-006.djvu", "type": "page", "pageNumber": 8, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 13017, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15342, "name": "c-007.djvu", "type": "page", "pageNumber": 9, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 15294, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15190, "name": "c-008.djvu", "type": "page", "pageNumber": 10, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 15142, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12941, "name": "c-009.djvu", "type": "page", "pageNumber": 11, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 12893, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12834, "name": "c-010.djvu", "type": "page", "pageNumber": 12, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 12786, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13647, "name": "c-011.djvu", "type": "page", "pageNumber": 13, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 13599, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12605, "name": "c-012.djvu", "type": "page", "pageNumber": 14, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-012.djbz"},
+    { "id": "Sjbz", "size": 12557, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 10069, "name": "c-021.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 10057, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13031, "name": "c-013.djvu", "type": "page", "pageNumber": 15, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2927x2399, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 12983, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13302, "name": "c-014.djvu", "type": "page", "pageNumber": 16, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 13254, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13973, "name": "c-015.djvu", "type": "page", "pageNumber": 17, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 13925, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16319, "name": "c-016.djvu", "type": "page", "pageNumber": 18, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 16271, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13546, "name": "c-016a.djvu", "type": "page", "pageNumber": 19, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 13498, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12443, "name": "c-017.djvu", "type": "page", "pageNumber": 20, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 12395, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12590, "name": "c-018.djvu", "type": "page", "pageNumber": 21, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 12542, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13404, "name": "c-019.djvu", "type": "page", "pageNumber": 22, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 13356, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14205, "name": "c-020.djvu", "type": "page", "pageNumber": 23, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 14157, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15183, "name": "c-021.djvu", "type": "page", "pageNumber": 24, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-021.djbz"},
+    { "id": "Sjbz", "size": 15135, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 10918, "name": "c-031.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 10906, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15708, "name": "c-022.djvu", "type": "page", "pageNumber": 25, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 15660, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13531, "name": "c-023.djvu", "type": "page", "pageNumber": 26, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 13483, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14430, "name": "c-024.djvu", "type": "page", "pageNumber": 27, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 14382, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 18393, "name": "c-025.djvu", "type": "page", "pageNumber": 28, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 18345, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16779, "name": "c-026.djvu", "type": "page", "pageNumber": 29, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 16731, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12931, "name": "c-027.djvu", "type": "page", "pageNumber": 30, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 12883, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13954, "name": "c-028.djvu", "type": "page", "pageNumber": 31, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 13906, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13917, "name": "c-029.djvu", "type": "page", "pageNumber": 32, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 13869, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15685, "name": "c-030.djvu", "type": "page", "pageNumber": 33, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 15637, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16277, "name": "c-031.djvu", "type": "page", "pageNumber": 34, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-031.djbz"},
+    { "id": "Sjbz", "size": 16229, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 11628, "name": "c-041.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 11616, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15906, "name": "c-032.djvu", "type": "page", "pageNumber": 35, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 15858, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14111, "name": "c-033.djvu", "type": "page", "pageNumber": 36, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 14063, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 18352, "name": "c-034.djvu", "type": "page", "pageNumber": 37, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 18304, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 17025, "name": "c-035.djvu", "type": "page", "pageNumber": 38, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 16977, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16046, "name": "c-036.djvu", "type": "page", "pageNumber": 39, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 15998, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14884, "name": "c-037.djvu", "type": "page", "pageNumber": 40, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 14836, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 17072, "name": "c-038.djvu", "type": "page", "pageNumber": 41, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 17024, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13513, "name": "c-039.djvu", "type": "page", "pageNumber": 42, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2927x2411, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 13465, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16285, "name": "c-040.djvu", "type": "page", "pageNumber": 43, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2923x2411, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 16237, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16338, "name": "c-041.djvu", "type": "page", "pageNumber": 44, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2934x2384, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-041.djbz"},
+    { "id": "Sjbz", "size": 16290, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 8252, "name": "c-051.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 8240, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13700, "name": "c-042.djvu", "type": "page", "pageNumber": 45, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2969x2392, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 13652, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12924, "name": "c-043.djvu", "type": "page", "pageNumber": 46, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 12876, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14477, "name": "c-044.djvu", "type": "page", "pageNumber": 47, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 14429, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14883, "name": "c-045.djvu", "type": "page", "pageNumber": 48, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 14835, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13333, "name": "c-046.djvu", "type": "page", "pageNumber": 49, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 13285, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 11893, "name": "c-047.djvu", "type": "page", "pageNumber": 50, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 11845, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 16025, "name": "c-048.djvu", "type": "page", "pageNumber": 51, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 15977, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13370, "name": "c-049.djvu", "type": "page", "pageNumber": 52, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 13322, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15690, "name": "c-050.djvu", "type": "page", "pageNumber": 53, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 15642, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15006, "name": "c-051.djvu", "type": "page", "pageNumber": 54, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-051.djbz"},
+    { "id": "Sjbz", "size": 14958, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 8980, "name": "c-061.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 8968, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14842, "name": "c-052.djvu", "type": "page", "pageNumber": 55, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 14794, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14366, "name": "c-053.djvu", "type": "page", "pageNumber": 56, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 14318, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15111, "name": "c-054.djvu", "type": "page", "pageNumber": 57, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 15063, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13863, "name": "c-055.djvu", "type": "page", "pageNumber": 58, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 13815, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13520, "name": "c-056.djvu", "type": "page", "pageNumber": 59, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 13472, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13394, "name": "c-057.djvu", "type": "page", "pageNumber": 60, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 13346, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 15322, "name": "c-058.djvu", "type": "page", "pageNumber": 61, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 15274, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12574, "name": "c-059.djvu", "type": "page", "pageNumber": 62, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 12526, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14812, "name": "c-060.djvu", "type": "page", "pageNumber": 63, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 14764, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 11677, "name": "c-061.djvu", "type": "page", "pageNumber": 64, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-061.djbz"},
+    { "id": "Sjbz", "size": 11629, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVI", "size": 10462, "name": "c-071.djbz", "type": "dictionary", "internalChunks": [
+    { "id": "Djbz", "size": 10450, "info": "JB2 shared dictionary"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12961, "name": "c-062.djvu", "type": "page", "pageNumber": 65, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 12913, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13119, "name": "c-063.djvu", "type": "page", "pageNumber": 66, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 13071, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 14671, "name": "c-064.djvu", "type": "page", "pageNumber": 67, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 14623, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12778, "name": "c-065.djvu", "type": "page", "pageNumber": 68, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 12730, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 12081, "name": "c-066.djvu", "type": "page", "pageNumber": 69, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 12033, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 11801, "name": "c-067.djvu", "type": "page", "pageNumber": 70, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 11753, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 18561, "name": "c-068.djvu", "type": "page", "pageNumber": 71, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 18513, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 21846, "name": "c-069.djvu", "type": "page", "pageNumber": 72, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 21798, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 13677, "name": "c-070.djvu", "type": "page", "pageNumber": 73, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 13629, "info": "JB2 bilevel data"}
+  ]},
+  { "id": "FORM:DJVU", "size": 5268, "name": "c-071.djvu", "type": "page", "pageNumber": 74, "internalChunks": [
+    { "id": "INFO", "size": 10, "info": "DjVu 2940x2400, v25, 300 dpi, gamma=2.2"},
+    { "id": "INCL", "size": 10, "info": "c-071.djbz"},
+    { "id": "Sjbz", "size": 5220, "info": "JB2 bilevel data"}
+  ]}
+]}
+

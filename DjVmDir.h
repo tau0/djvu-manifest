@@ -1,58 +1,3 @@
-//C-  -*- C++ -*-
-//C- -------------------------------------------------------------------
-//C- DjVuLibre-3.5
-//C- Copyright (c) 2002  Leon Bottou and Yann Le Cun.
-//C- Copyright (c) 2001  AT&T
-//C-
-//C- This software is subject to, and may be distributed under, the
-//C- GNU General Public License, either Version 2 of the license,
-//C- or (at your option) any later version. The license should have
-//C- accompanied the software or you may obtain a copy of the license
-//C- from the Free Software Foundation at http://www.fsf.org .
-//C-
-//C- This program is distributed in the hope that it will be useful,
-//C- but WITHOUT ANY WARRANTY; without even the implied warranty of
-//C- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//C- GNU General Public License for more details.
-//C- 
-//C- DjVuLibre-3.5 is derived from the DjVu(r) Reference Library from
-//C- Lizardtech Software.  Lizardtech Software has authorized us to
-//C- replace the original DjVu(r) Reference Library notice by the following
-//C- text (see doc/lizard2002.djvu and doc/lizardtech2007.djvu):
-//C-
-//C-  ------------------------------------------------------------------
-//C- | DjVu (r) Reference Library (v. 3.5)
-//C- | Copyright (c) 1999-2001 LizardTech, Inc. All Rights Reserved.
-//C- | The DjVu Reference Library is protected by U.S. Pat. No.
-//C- | 6,058,214 and patents pending.
-//C- |
-//C- | This software is subject to, and may be distributed under, the
-//C- | GNU General Public License, either Version 2 of the license,
-//C- | or (at your option) any later version. The license should have
-//C- | accompanied the software or you may obtain a copy of the license
-//C- | from the Free Software Foundation at http://www.fsf.org .
-//C- |
-//C- | The computer code originally released by LizardTech under this
-//C- | license and unmodified by other parties is deemed "the LIZARDTECH
-//C- | ORIGINAL CODE."  Subject to any third party intellectual property
-//C- | claims, LizardTech grants recipient a worldwide, royalty-free, 
-//C- | non-exclusive license to make, use, sell, or otherwise dispose of 
-//C- | the LIZARDTECH ORIGINAL CODE or of programs derived from the 
-//C- | LIZARDTECH ORIGINAL CODE in compliance with the terms of the GNU 
-//C- | General Public License.   This grant only confers the right to 
-//C- | infringe patent claims underlying the LIZARDTECH ORIGINAL CODE to 
-//C- | the extent such infringement is reasonably necessary to enable 
-//C- | recipient to make, have made, practice, sell, or otherwise dispose 
-//C- | of the LIZARDTECH ORIGINAL CODE (or portions thereof) and not to 
-//C- | any greater extent that may be necessary to utilize further 
-//C- | modifications or combinations.
-//C- |
-//C- | The LIZARDTECH ORIGINAL CODE is provided "AS IS" WITHOUT WARRANTY
-//C- | OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
-//C- | TO ANY WARRANTY OF NON-INFRINGEMENT, OR ANY IMPLIED WARRANTY OF
-//C- | MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
-//C- +------------------------------------------------------------------
-
 #ifndef _DJVMDIR_H
 #define _DJVMDIR_H
 #ifdef HAVE_CONFIG_H
@@ -80,14 +25,14 @@
     document directory}.  This directory lists all component files composing
     the given document, helps to access every component file and identify the
     pages of the document.
-    \begin{itemize} 
-    \item In a {\em bundled} multipage file, the component files 
+    \begin{itemize}
+    \item In a {\em bundled} multipage file, the component files
          are stored immediately after the #"DIRM"# chunk,
-         within the #"FORM:DJVU"# composite chunk.  
-    \item In an {\em indirect} multipage file, the component files are 
-          stored in different files whose URLs are composed using information 
+         within the #"FORM:DJVU"# composite chunk.
+    \item In an {\em indirect} multipage file, the component files are
+          stored in different files whose URLs are composed using information
           stored in the #"DIRM"# chunk.
-    \end{itemize} 
+    \end{itemize}
     Most of the component files represent pages of a document.  Some files
     however represent data shared by several pages.  The pages refer to these
     supporting files by means of an inclusion chunk (#"INCL"# chunks)
@@ -166,9 +111,9 @@ public:
    void decode(const GP<ByteStream> &stream);
       /** Encodes the directory into the specified stream. */
    void encode(const GP<ByteStream> &stream, const bool do_rename=false) const;
-      /** Encodes the directory into the specified stream, 
+      /** Encodes the directory into the specified stream,
           explicitely as bundled or indirect. */
-  void encode(const GP<ByteStream> &stream, 
+  void encode(const GP<ByteStream> &stream,
               const bool bundled, const bool do_rename) const;
       /** Tests if directory defines an {\em indirect} document. */
    inline bool is_indirect(void) const;
@@ -228,7 +173,7 @@ public:
   // Out of the record: INCLUDE below must be zero and PAGE must be one.
   // This is to avoid problems with the File constructor, which now takes
   // 'int file_type' as the last argument instead of 'bool is_page'
-  
+
   /** File type. Possible file types are:
      \begin{description}
        \item[PAGE] This is a top level page file. It may include other
@@ -298,7 +243,7 @@ public:
   bool valid_name;
 
   /** Tests if this file represents a page of the document. */
-  bool is_page(void) const 
+  bool is_page(void) const
   {
     return (flags & TYPE_MASK)==PAGE;
   }
@@ -321,13 +266,13 @@ public:
   bool is_shared_anno(void) const
   { return (flags & TYPE_MASK)==SHARED_ANNO; }
 
-  int get_page_num(void) const 
-  { return page_num; } 
+  int get_page_num(void) const
+  { return page_num; }
 protected:
   GUTF8String name;
   GUTF8String oldname;
   GUTF8String id;
-  GUTF8String title; 
+  GUTF8String title;
   void set_save_name(const GUTF8String &name);
 private:
       friend class DjVmDir;
@@ -405,14 +350,14 @@ DjVmDir::File::set_title(const GUTF8String &xtitle) { title=xtitle; }
     of the component file.  The second string contains the name of the
     component file.  It is only present when the flag #hasname# is set. The third
     one contains the title of the component file. It is only present when the
-    flag #hastitle# is set. The \Ref{bzz} encoding system makes sure that 
+    flag #hastitle# is set. The \Ref{bzz} encoding system makes sure that
     all these strings will be encoded efficiently despite their possible
     redundancies.
     \begin{verbatim}
           ZSTR:     ID of the first component file.
           ZSTR:     Name of the first component file (only if #hasname# is set.)
           ZSTR:     Title of the first component file (only if #hastitle# is set.)
-          ... 
+          ...
           ZSTR:     ID of the last component file.
           ZSTR:     Name of the last component file (only if #hasname# is set.)
           ZSTR:     Title of the last component file (only if #hastitle# is set.)
