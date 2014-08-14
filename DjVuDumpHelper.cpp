@@ -303,7 +303,7 @@ display_chunks(ByteStream & out_str, IFFByteStream &iff,
     else counters[id]++;
 
     GUTF8String msg;
-    msg.format("%s%s{ \"id\": \"%s\", \"offset\": %d, \"size\": %d, ", time++ ? ",\n" : "\n", (const char *)head, (const char *)id, rawoffset, size + 8);
+    msg.format("%s%s{ \"id\": \"%s\", \"offset\": %d, \"size\": %d ", time++ ? ",\n" : "\n", (const char *)head, (const char *)id, rawoffset, size + 8);
     out_str.format( "%s", (const char *)msg);
     // Display DJVM is when adequate
     if (djvminfo.dir)
@@ -313,32 +313,34 @@ display_chunks(ByteStream & out_str, IFFByteStream &iff,
         {
           GUTF8String id = rec->get_load_name();
           GUTF8String title = rec->get_title();
-          out_str.format( "\"name\": \"%s\", ", (const char*) id);
+          out_str.format( ", \"name\": \"%s\" ", (const char*) id);
           if (rec->is_include())
-            out_str.format("\"type\": \"dictionary\"");
+            out_str.format(", \"type\": \"dictionary\"");
           if (rec->is_thumbnails())
-            out_str.format("\"type\": \"thumb\" ");
+            out_str.format(", \"type\": \"thumb\" ");
           if (rec->is_shared_anno())
-            out_str.format("\"type\": anno ");
+            out_str.format(", \"type\": \"anno\" ");
           if (rec->is_page())
-            out_str.format("\"type\": \"page\", \"pageNumber\": %d", rec->get_page_num()+1);
+            out_str.format(", \"type\": \"page\", \"pageNumber\": %d", rec->get_page_num()+1);
           if (id != title)
-            out_str.format("\"title\", \"%s\"", (const char*)title);
+            out_str.format(", \"title\", \"%s\"", (const char*)title);
           out_str.format(", \"internalChunks\": [");
         }
     } else if (id == "FORM:DJVM") {
-      out_str.format("\"internalChunks\": [");
+      out_str.format(", \"internalChunks\": [");
     }
     // Test chunk type
     iff.full_id(fullid);
+    bool closed = false;
     for (int i=0; disproutines[i].id; i++)
       if (fullid == disproutines[i].id || id == disproutines[i].id)
       {
         int n = msg.length();
         //while (n++ < 14+(int) head.length()) putchar(out_str, ' ');
-        if (!iff.composite()) out_str.format( "\"info\": \"");
+        out_str.format( ", \"info\": \"");
         (*disproutines[i].subr)(out_str, iff, head2,
                                 size, djvminfo, counters[id]);
+        closed = true;
         out_str.format("\"}");
         break;
       }
@@ -347,7 +349,10 @@ display_chunks(ByteStream & out_str, IFFByteStream &iff,
       if (iff.composite()) {
         display_chunks(out_str, iff, head2, djvminfo);
         out_str.format("\n%s]}", (const char *)head);
+        closed = true;
       }
+      if (!closed)
+        out_str.format("}");
       // Terminate
       iff.close_chunk();
   }
